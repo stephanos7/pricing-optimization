@@ -40,3 +40,35 @@ What's the estimated sales volume if we are selling at $0.99?
   ~u =  44.84
 
 ```
+
+4. Having done this, we can add to our data the price points of a competitor and check how sales volumes are affected against two variables: fluctuations in our price, as well as our competitors. 
+
+![competitor pricing](https://i.ibb.co/KjCTQT3/competitor-prices.png)
+
+5. Running a regression again with the additional competitor pricing, a report will be generated with an additional coefficient, this time linked to our competitors price:
+
+![competitor's coefficient](https://i.ibb.co/q55ph3Q/competitor-coefficient.png)
+
+6. We can now interpret the formula for estimating our sales volume based on both our competitor's pricing and ours as follows:
+
+```
+ Forecast of Units Sold = Some Intercept Value + (Some Slope Value * Our Price) + (Some Sloe Value * Competititor's Price)
+  
+      or simply:
+      
+   ~u = a + (b * P) + (c * CP)
+
+```
+
+Substituting for all coefficients:
+
+```
+What's our estimated sales volume if we are selling at $0.99 and our competitor at $1.99?
+
+ ~u = 59.83 + (-17.03 * 0.99) + (2.04 * 1.99)
+ ~u = 47.04
+ 
+```
+
+In other words if we consider only our own price, we can estimate that our sales volume will reach 45 units as described in step 5 above. However, if we also consider our competitor's pricing, our estimates change. If our competitor's price 1 dollar higher than us, are sales will grow even further reach 47 units. The results of the regression analysis are expected since with contextualising on the elasticity of our demand, we can safely assume that as our competitor's price rises, our sales will increase. 
+
